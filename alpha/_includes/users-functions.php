@@ -20,16 +20,13 @@ function get_users()
  * @return object - mysqli result
  */
 
-function add_user ($first_name, $last_name, $email, $phone)
+function add_user ($username, $password)
 {
     global $db_connection;
-    $default_password = 'idm232';
-    $hashed_password = password_hash($default_password, PASSWORD_DEFAULT);
-
 
     $query = 'INSERT INTO users';
-    $query .= ' (first_name, last_name, password, email, phone)';
-    $query .= " VALUES ('{$first_name}', '{$last_name}', '{$hashed_password}', '$email', '$phone')";
+    $query .= ' (username, phone, pass)';
+    $query .= " VALUES ('{$username}', '{$password}')";
     $result = mysqli_query($db_connection, $query);
     return $result;
 }
@@ -54,20 +51,6 @@ function get_user_by_id($id)
 }
 
 /**
- * Delete user by the user id
- *
- * @param integer $id
- * @return object - mysqli_result
- */
-function delete_user_by_id($id)
-{
-    global $db_connection;
-    $query = "DELETE FROM users WHERE id = {$id}";
-    $result = mysqli_query($db_connection, $query);
-    return $result;
-}
-
-/**
  * Edit existing user
  * @param  string $first_name - first name of the user
  * @param  string $last_name - last name of the user
@@ -77,43 +60,34 @@ function delete_user_by_id($id)
  * @return object - mysqli_result
  */
 
-function edit_user($first_name_value, $last_name_value, $email_value, $phone_value, $id_value)
-{
-    global $db_connection;
-    $query = 'UPDATE users';
-    $query .= " SET first_name = '{$first_name_value}', last_name = '{$last_name_value}', email = '{$email_value}', phone = '{$phone_value}'";
-    $query .= " WHERE id = {$id_value}";
-    $result = mysqli_query($db_connection, $query);
-    return   $result;
-}
 
-function verify_password($password)
+function get_user_by_username($username, $phone, $password)
 {
     global $db_connection;
-    $query = "SELECT password FROM users WHERE id = {$_SESSION['user']['id']}";
-    $result = mysqli_query($db_connection, $query);
-    $password = mysqli_fetch_assoc($result);
-    return password_verify($_POST['password'], $password['password']);
-}
-
-function get_user_by_email_and_password($email, $password)
-{
-    global $db_connection;
-    $query = "SELECT * FROM users WHERE email = '$email'";
+    $query = "SELECT id FROM users WHERE pass = '$password' AND username = '$username'";
     $result = mysqli_query($db_connection, $query);
 
     if ($result->num_rows > 0) {
-        $user = mysqli_fetch_assoc($result);
-        $existing_hashed_password = $user['password'];
-        $isPasswordCorrect = password_verify($password, $existing_hashed_password);
-        if ($isPasswordCorrect) {
-            return $user;
-        } else {
-            return false;
+        echo "Returning Customer";
+
+        while($row = $result->fetch_assoc()) {
+            echo "<br>" . "id: " . $row["id"];
+          }
+
+        // redirect_to('/main.php');
+    } 
+    else {
+        $query = "INSERT INTO users (username, phone, pass) VALUES ('$username', '$phone', '$password')";
+        $result2 = mysqli_query($db_connection, $query);
+
+        if ($result2) {
+            echo "New Customer";
+            // redirect_to('/main.php');
+        } 
+        else {
+            $error_message = 'User was not created';
+            redirect_to('/admin/recipes?error=' . $error_message);
         }
-    } else {
-        return false;
     }
 }
-
 ?>

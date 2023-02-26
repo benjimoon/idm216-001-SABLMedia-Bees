@@ -358,7 +358,9 @@ a.header__banner--text {
   outline: none !important;
   cursor: pointer;
 }
-
+.all-menu-items {
+  padding: 3rem;
+}
 .search-option {
   position: absolute;
   text-align: right;
