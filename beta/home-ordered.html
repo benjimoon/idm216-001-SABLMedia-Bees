@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyson Bees</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="/images/png/Mobile-PNG/Fav Icon.png">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+    
+    <header class="header">
+        <div class="header__logo">
+            <img src="images/svg/Logo+Bee.svg" alt="Bee with trail">
+        </div>
+        <div class="header__banner">
+            <a href="" class="header__banner--text"><img src="images/svg/clock.svg" class="header__banner--icon"
+                    alt="Clock Icon">11:00 am - 5:00 pm</a>
+            <a href="" class="header__banner--text"><img src="images/svg/place.svg" class="header__banner--icon"
+                    alt="Location Icon">3260 Spruce St.</a>
+        </div>
+    </header>
+    <div class="order-progress">
+        <a href="order-confirmation.html"><button class="confirmation_button">View Confirmation</button></a>
+        <img src="images/svg/progress.svg" alt="" class="progress-bar">
+    </div>
+    <div class="main">
+        <div class="start-order component-teal">
+            <h2 class="start-order__text--title">What are you craving today?</h2>
+            <img class="start-order__pattern--top" src="images/svg/Teal Honeycomb Top.svg">
+            <img class="start-order__pattern--bottom" src="images/svg/Teal Honeycomb Bottom.svg">
+            <img class="start-order__pattern--bottom" src="images/png/Mobile-PNG/taco.png">
+            <div class="container">
+                <div class="tab-slider--nav">
+                    <ul class="tab-slider--tabs">
+                        <li class="tab-slider--trigger active" rel="tab1">Asap</li>
+                        <li class="tab-slider--trigger " rel="tab2">Schedule</li>
+                    </ul>
+                </div>
+                <div class="tab-slider--container">
+                    <div id="tab1" class="tab-slider--body">
+                    </div>
+                </div>
+            </div>
+            <a href="menu.html"><button class="component__button">Start Order</button></a>
+        </div>
+        <h1 class="text__title">Popular Orders</h1>
+        <div class="home-order">
+        <img class="home-order__image" src="images/png/Mobile-PNG/Beef Short Rib Taco-mobile -3x.png">
+        <h2 class="home-order__text--title">Korean BBQ Beef Short Rib Taco</h2>
+        <img class="home-order--plus" src="images/svg/White Plus.svg">
+        </div>
+        <h1 class="text__title">Rewards</h1>
+        <div class="start-order component-yellow">
+            <h2 class="rewards__text--title">Help the bee get to the hive!</h2>
+            <img class="start-order__pattern--top" src="images/svg/Yellow Honeycomb Top.svg">
+            <img class="start-order__pattern--bottom" src="images/svg/Yellow Honeycomb Bottom.svg">
+            <img class="rewards__image--signedin" src="images/png/Mobile-PNG/rewards-signedin.png">
+            <a href="rewards.html"><button class="component__button">View Rewards</button></a>
+            <!-- <a href="menu.html"><button class="component__button--secondary">Sign Up</button></a> -->
+        </div>
+
+                <a href="cart.html"><img class="cart" src="images/svg/Cart Icon.svg"></a>
+                <mobile-footer__home></mobile-footer__home>
+                <script type="module" src="script/main.js"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tyson Bees</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/png/Mobile-PNG/Fav Icon.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/demo.css" />
+  </head>
+
+  <body>
+    <img src="images/svg/Background.svg" class="background--mobile" />
+    <header class="header">
+      <div class="header__logo">
+        <img src="images/svg/Logo+Bee.svg" alt="Bee with trail" />
+      </div>
+      <!-- <div class="header__banner">
+                <a href="" class="header__banner--text"><img src="images/svg/clock.svg" class="header__banner--icon" alt="Clock Icon">11:00 am - 5:00 pm</a>
+                <a href="" class="header__banner--text"><img src="images/svg/place.svg" class="header__banner--icon" alt="Location Icon">3260 Spruce St.</a>
+        </div> -->
+    </header>
+
+    <div class="main">
+      <form class="search-form">
+        <input
+          type="search"
+          value=""
+          placeholder="Search menu item"
+          class="search-input"
+        />
+        <button type="submit" class="search-button">
+          <img
+            src="images/svg/navigate/light/bar/icon/outline/search-normal.svg"
+            class="submit-button"
+          />
+        </button>
+        <div class="search-option">
+          <img src="images/svg/filter icon.svg" />
+        </div>
+      </form>
+      <div class="menu__categories">
+        <h1 class="menu text__title">Menu</h1>
+        <a href="menu-items.html">
+          <div class="menu__category teal">
+            <img
+              class="menu__category--image"
+              src="images/png/Mobile-PNG/Taco Picture.png"
+              alt="Thai Basil Chicken Taco"
+            />
+            <h2 class="menu__category--name">Tacos</h2>
+            <img
+              class="menu__category--pattern"
+              src="images/svg/Teal Pattern.svg"
+            />
+          </div>
+        </a>
+        <div class="menu__category orange">
+          <img
+            class="menu__category--image"
+            src="images/png/Mobile-PNG/Burrito Image.png"
+            alt="Thai Basil Chicken Taco"
+          />
+          <h2 class="menu__category--name">Burritos</h2>
+          <img
+            class="menu__category--pattern"
+            src="images/svg/Orange Pattern.svg"
+          />
+        </div>
+        <div class="menu__category blue">
+          <img
+            class="menu__category--image"
+            src="images/png/Mobile-PNG/Wraps Image.png"
+            alt="Thai Basil Chicken Taco"
+          />
+          <h2 class="menu__category--name">Wraps</h2>
+          <img
+            class="menu__category--pattern"
+            src="images/svg/Blue Pattern.svg"
+          />
+        </div>
+        <div class="menu__category purple">
+          <img
+            class="menu__category--image"
+            src="images/png/Mobile-PNG/Hot Dogs Image.png"
+            alt="Thai Basil Chicken Taco"
+          />
+          <h2 class="menu__category--name">Hoagies</h2>
+          <img
+            class="menu__category--pattern"
+            src="images/svg/Purple Pattern.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Include this portion of code for the cart-->
+
+    <div class="app">
+      <i class="fa fa-shopping-basket fa-3x" aria-hidden="true"></i>
+      <div class="app-body">
+        <ul class="list"></ul>
+      </div>
+    </div>
+    <div id="tray">
+      <div class="count"></div>
+      <i class="fa fa-shopping-basket fa-2x" aria-hidden="true"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

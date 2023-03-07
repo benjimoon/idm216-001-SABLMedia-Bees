@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="CodeHim" />
+    <title>cart</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- Demo CSS (No need to include it into your project) -->
+    <link rel="stylesheet" href="styles/demo.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/png/Mobile-PNG/Fav Icon.png"
+    />
+
+    <!-- Include this portion of code for the responsive hamburger menu-->
+    <header>
+      <nav>
+        <input
+          class="menu__checkbox"
+          type="checkbox"
+          role="Menu"
+          aria-label="Menu"
+          aria-controls="navigation"
+          aria-haspopup="true"
+          id="menu2"
+        />
+        <label class="menu__icon2" for="menu2"
+          ><span class="hamburger"></span
+        ></label>
+        <ul class="menu2" role="menuitem">
+          <li><a href="">Home</a></li>
+          <li><a href="">Order</a></li>
+          <li><a href="">Rewards</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <img src="images/svg/Background.svg" class="background--mobile" />
+      <header class="header">
+        <div class="header__logo">
+          <img src="images/svg/Logo+Bee.svg" alt="Bee with trail" />
+        </div>
+        <!-- <div class="header__banner">
+                <a href="" class="header__banner--text"><img src="images/svg/clock.svg" class="header__banner--icon" alt="Clock Icon">11:00 am - 5:00 pm</a>
+                <a href="" class="header__banner--text"><img src="images/svg/place.svg" class="header__banner--icon" alt="Location Icon">3260 Spruce St.</a>
+        </div> -->
+      </header>
+
+      <div class="main">
+        <div class="menu">
+          <h1 class="menu text__title">Cart</h1>
+          <div class="modify">
+            <button class="button__time"><h2>Modify Order Time:</h2></button>
+            <div class="time"><h2>ASAP</h2></div>
+          </div>
+
+          <div class="menu__item">
+            <div id="market">
+              <div class="items product">
+                <img
+                  class="menu__item--plus"
+                  src="images/svg/Cancel Icon.svg"
+                />
+              </div>
+            </div>
+            <img
+              src="images/png/Mobile-PNG/Beef Short Rib Taco Picture.png"
+              alt="Thai Basil Chicken Taco"
+              class="menu__item--image"
+            />
+            <h2 class="menu__item--name">Korean BBQ Beef Short Rib Tacos</h2>
+            <p class="menu__item--price">$12.00</p>
+            <div class="amount"></div>
+            <div class="add remove">
+              <img
+                src="images/png/Mobile-PNG/subBtn.png"
+                alt="subBtn"
+                class="subBtn"
+              />
+              <img
+                src="images/png/Mobile-PNG/addBtn.png"
+                alt="addBtn"
+                class="addBtn"
+              />
+            </div>
+          </div>
+          <a href="menu-item-overlay.html">
+            <div class="menu__item">
+              <img
+                src="images/png/Mobile-PNG/Thai Basil Chicken Taco Picture.png"
+                alt="Thai Basil Chicken Taco"
+                class="menu__item--image"
+              />
+              <h2 class="menu__item--name">Thai Basil Chicken Tacos</h2>
+              <p class="menu__item--price">$12.00</p>
+              <div class="amount"></div>
+              <div class="add remove">
+                <img
+                  src="images/png/Mobile-PNG/subBtn.png"
+                  alt="subBtn"
+                  class="subBtn"
+                />
+                <img
+                  src="images/png/Mobile-PNG/addBtn.png"
+                  alt="addBtn"
+                  class="addBtn"
+                />
+              </div>
+              <img class="menu__item--plus" src="images/svg/Cancel Icon.svg" />
+            </div>
+          </a>
+          <a href="menu-item-overlay.html">
+            <div class="menu__item">
+              <img
+                src="images/png/Mobile-PNG/Edamame Taco Picture.png"
+                alt="Thai Basil Chicken Taco"
+                class="menu__item--image"
+              />
+              <h2 class="menu__item--name">Edamame <br />Tacos</h2>
+              <p class="menu__item--price">$12.00</p>
+              <div class="amount"></div>
+              <div class="add remove">
+                <img
+                  src="images/png/Mobile-PNG/subBtn.png"
+                  alt="subBtn"
+                  class="subBtn"
+                />
+                <img
+                  src="images/png/Mobile-PNG/addBtn.png"
+                  alt="addBtn"
+                  class="addBtn"
+                />
+              </div>
+              <img class="menu__item--plus" src="images/svg/Cancel Icon.svg" />
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="menu.html"
+        ><button class="button__primary"><h2>Add Items</h2></button></a
+      >
+      <a href="menu.html"
+        ><button class="button__secondary"><h2>Checkout</h2></button></a
+      >
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
