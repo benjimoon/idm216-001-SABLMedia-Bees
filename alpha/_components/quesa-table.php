@@ -11,7 +11,7 @@ if (!isset($quesas)) {
       echo "     
 
       <div class='menu'>
-          <a href='menu-item-overlay.html'>
+      <a href='{$site_url}/menu-quesa-overlay.php?id={$quesa['id']}'>
               <div class='menu__item'>
                   <img src='{$site_url}{$quesa['image_path']}' class='menu__item--plus'>
                   <img src='{$site_url}{$quesa['image_path2']}' class='menu__item--image'>

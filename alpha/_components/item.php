@@ -1,0 +1,33 @@
+<?php 
+include_once 'app.php';
+$site_url = site_url();
+?>
+
+<?php
+// get users data from database
+$query = "SELECT * FROM meals WHERE category_id = {$_GET['id']}";
+$result = mysqli_query($db_connection, $query);
+if ($result->num_rows > 0) {
+    // Get row from results and assign to $user variable;
+    $menu = mysqli_fetch_assoc($result);
+} else {
+    $error_message = 'Recipe does not exist';
+    // redirect_to('/admin/users?error=' . $error_message);
+}
+?>
+<?php
+while ($row = mysqli_fetch_array($result)) {
+
+echo"
+<a href='{$site_url}/item-details.php?id={$row['id']}' class='text'>
+<div class='menu'>
+<div class='menu_item'>
+<h2 class='menu__item--name'> {$row['title']}</h2>
+    <p class='menu__item--price'> $" . "{$row['price']} </p>
+    <img class='' src='{$site_url}{$row['image_path']}' class='menu__item--plus'>
+    <img class='' src='{$site_url}{$row['image_path2']}' class='menu__item--image'>
+</div>
+</div>
+</a>";
+}
+?>

@@ -10,7 +10,7 @@ if (!isset($burritos)) {
       echo "     
 
       <div class='menu'>
-          <a href='menu-item-overlay.html'>
+      <a href='{$site_url}/menu-burrito-overlay.php?id={$burrito['id']}'>
               <div class='menu__item'>
                   <img src='{$site_url}{$burrito['image_path']}' class='menu__item--plus'>
                   <img src='{$site_url}{$burrito['image_path2']}' class='menu__item--image'>

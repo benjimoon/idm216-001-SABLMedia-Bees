@@ -1,63 +1,34 @@
 <?php
 
-// get all recipes from the database
+// get all recipes fr<?php
 
-function get_tacos()
-{
+/**
+ * get all users from the database
+ * @return object - mysqli_result
+ */
+
+
+function get_order_by_user_id($currentUser) {
     global $db_connection;
-    $query = 'SELECT * FROM tacos ORDER BY id';
+    $query = "SELECT orders.id, orders.quantity, users.username, meals.id AS mealID, meals.title, meals.price, meals.image_path2\n"
+
+    . "FROM orders \n"
+
+    . "INNER JOIN users ON orders.userID = users.id \n"
+
+    . "INNER JOIN meals ON orders.meal_id = meals.id \n"
+
+    . "WHERE users.id = '{$currentUser['id']}' AND status = 'active'"
+
+    . "GROUP BY orders.id, orders.quantity, users.username, meals.id, meals.title, meals.price, meals.image_path2";
+    
+    // . "ORDER BY id DESC LIMIT 1";
+ 
     $result = mysqli_query($db_connection, $query);
+
     return $result;
+
 }
 
-function get_burritos()
-{
-    global $db_connection;
-    $query = 'SELECT * FROM burritos ORDER BY id';
-    $result = mysqli_query($db_connection, $query);
-    return $result;
-}
 
-function get_wraps()
-{
-    global $db_connection;
-    $query = 'SELECT * FROM wraps ORDER BY id';
-    $result = mysqli_query($db_connection, $query);
-    return $result;
-}
-function get_hoagies()
-{
-    global $db_connection;
-    $query = 'SELECT * FROM hoagies ORDER BY id';
-    $result = mysqli_query($db_connection, $query);
-    return $result;
-}
-function get_quesas()
-{
-    global $db_connection;
-    $query = 'SELECT * FROM quesadillas ORDER BY id';
-    $result = mysqli_query($db_connection, $query);
-    return $result;
-}
-function get_bowls()
-{
-    global $db_connection;
-    $query = 'SELECT * FROM bowls ORDER BY id';
-    $result = mysqli_query($db_connection, $query);
-    return $result;
-}
-function get_sandwiches()
-{
-    global $db_connection;
-    $query = 'SELECT * FROM sandwiches ORDER BY id';
-    $result = mysqli_query($db_connection, $query);
-    return $result;
-}
-function get_drinks()
-{
-    global $db_connection;
-    $query = 'SELECT * FROM drinks ORDER BY id';
-    $result = mysqli_query($db_connection, $query);
-    return $result;
-}
 ?>

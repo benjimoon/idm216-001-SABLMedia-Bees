@@ -34,3 +34,5 @@ include_once __DIR__ . '/_includes/users-functions.php';
 include_once __DIR__ . '/_includes/menu-functions.php';
 
 
+$currentUser = ["id" => 3];
+

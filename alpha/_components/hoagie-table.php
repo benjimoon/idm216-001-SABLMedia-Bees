@@ -11,7 +11,7 @@ if (!isset($hoagies)) {
       echo "     
 
       <div class='menu'>
-          <a href='menu-item-overlay.html'>
+      <a href='{$site_url}/menu-hoagie-overlay.php?id={$hoagie['id']}'>
               <div class='menu__item'>
                   <img src='{$site_url}{$hoagie['image_path']}' class='menu__item--plus'>
                   <img src='{$site_url}{$hoagie['image_path2']}' class='menu__item--image'>

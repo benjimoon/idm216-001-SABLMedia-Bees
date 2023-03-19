@@ -11,7 +11,7 @@ if (!isset($sandwiches)) {
       echo "     
 
       <div class='menu'>
-          <a href='menu-item-overlay.html'>
+      <a href='{$site_url}/menu-sandwich-overlay.php?id={$sandwich['id']}'>
               <div class='menu__item'>
                   <img src='{$site_url}{$sandwich['image_path']}' class='menu__item--plus'>
                   <img src='{$site_url}{$sandwich['image_path2']}' class='menu__item--image'>

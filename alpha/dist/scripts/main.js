@@ -26,3 +26,21 @@ class mobile__footer_rewards extends HTMLElement{
 customElements.define('mobile-footer__home', mobile__footer_home)
 customElements.define('mobile-footer__order', mobile__footer_order)
 customElements.define('mobile-footer__rewards', mobile__footer_rewards)
+
+$("document").ready(function(){
+    $(".tab-slider--body").hide();
+    $(".tab-slider--body:first").show();
+  });
+  
+  $(".tab-slider--nav li").click(function() {
+    $(".tab-slider--body").hide();
+    var activeTab = $(this).attr("rel");
+    $("#"+activeTab).fadeIn();
+      if($(this).attr("rel") == "tab2"){
+          $('.tab-slider--tabs').addClass('slide');
+      }else{
+          $('.tab-slider--tabs').removeClass('slide');
+      }
+    $(".tab-slider--nav li").removeClass("active");
+    $(this).addClass("active");
+  });
