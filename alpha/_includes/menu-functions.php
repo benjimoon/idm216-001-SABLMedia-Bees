@@ -8,7 +8,7 @@
  */
 
 
-function get_order_by_user_id($currentUser) {
+function get_order_by_user_id($user) {
     global $db_connection;
     $query = "SELECT orders.id, orders.quantity, users.username, meals.id AS mealID, meals.title, meals.price, meals.image_path2\n"
 
@@ -18,7 +18,7 @@ function get_order_by_user_id($currentUser) {
 
     . "INNER JOIN meals ON orders.meal_id = meals.id \n"
 
-    . "WHERE users.id = '{$currentUser['id']}' AND status = 'active'"
+    . "WHERE users.id = '{$user['id']}' AND status = 'active'"
 
     . "GROUP BY orders.id, orders.quantity, users.username, meals.id, meals.title, meals.price, meals.image_path2";
     

@@ -22,12 +22,6 @@ $site_url = site_url();
                 <p class="quantity"><?php echo $row['quantity']; ?></p>
                 </div>
             </div>
-            <form action='<?php echo "{$site_url}/_includes/delete-item.php" ?>' method='POST'>
-                <input type='hidden' name='orderID' value='<?php echo "{$row['id']}"; ?>'/>
-                <button  class='delete-button'type='submit'>
-                <p class='text-decoration-underline'>Delete</p>
-                </button>
-            </form>
         </div>
     </div>
 </li>

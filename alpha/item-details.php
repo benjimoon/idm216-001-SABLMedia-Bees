@@ -17,9 +17,12 @@ if ($result->num_rows > 0) {
     $error_message = 'Recipe does not exist';
     // redirect_to('/admin/users?error=' . $error_message);
 }
-echo $meal['title'];
+
 $mealID = $_GET['id'];
 ?>
+<p><?php echo $meal['title'];?></p>
+<p><?php echo $meal['description'];?></p>
+<img src="<?php echo $site_url . $meal['image_path2'];?>">
 
 <form action='<?php echo"{$site_url}/_includes/process_orders.php" ?>' method="POST">
         <div>
@@ -28,7 +31,8 @@ $mealID = $_GET['id'];
             <input id="notes" name="note" type="text">
           </div>
         </div>
-    <input type='hidden' name='userID' value='<?php echo "{$currentUser['id']}"; ?>'/>
+    <input type='hidden' name='userID' value='<?php echo "{$user['id']}"; ?>'/>
     <input type='hidden' name='meal_id' value='<?php echo "{$mealID}"; ?>'/>
     <button type='submit'>Submit</button>
 </form>
+

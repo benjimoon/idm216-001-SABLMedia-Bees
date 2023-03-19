@@ -19,15 +19,19 @@ if ($order->num_rows > 0) {
 } 
 
 
-$query= "SELECT amount FROM users WHERE user = {$user['id']}";
+global $db_connection;
+   
+$query= "UPDATE orders SET status = 'archived' WHERE userID = {$user['id']} AND status = 'active'";
 $result = mysqli_query($db_connection, $query);
-$count = $user['amount'] + 1;
 
+$query = "SELECT amount FROM users WHERE id = {$user['id']}";
+$result = mysqli_query($db_connection, $query);
 
+$amount = $user['amount'];
+$amount += 1;
 
-echo "$" . $orderTotalPrice;
-
-
+$query= "UPDATE users SET amount = {$amount} WHERE id = {$user['id']}";
+$result = mysqli_query($db_connection, $query);
 ?>
 
-<a href="<?php echo "{$site_url}/confirmation.php" ?>">pay</a>
+<a href="<?php echo "{$site_url}/index.php" ?>">X</a>

@@ -20,15 +20,7 @@ include_once __DIR__ . '/_components/header.php';
             <input id="username" name="username" type="text" required>
           </div>
         </div>
-        
-        <br>
-
-        <div>
-          <label for="phone">Phone Number</label>
-          <div>
-            <input id="phone" name="phone" type="text" required>
-          </div>
-        </div>
+      
         
         <br>
 
