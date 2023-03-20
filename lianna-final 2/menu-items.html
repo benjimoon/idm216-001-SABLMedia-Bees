@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyson Bees</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="icon" href="images/png/Mobile-PNG/Fav Icon.png?" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <img src="images/svg/Background.svg" class="background--mobile" alt="Background"> <img
+    src="images/svg/Background-desktop.svg" class="background--desktop" alt="Background-desktop">
+  <header class="header">
+    <nav class=".desktop-nav nav" id="nav">
+      <div class="header__logo">
+          <a href="index.html">
+              <img src="images/svg/Logo+Bee.svg" alt="Bee with trail">
+          </a>
+          <div class="nav-right">
+              <a href="index.html" class="inactive">Home</a>
+              <a href="menu.html" class="active">Order</a>
+              <a href="rewards.html" class="inactive">Rewards</a>
+          </div>
+      </div>
+  </nav>
+    <div class="header__banner">
+      <a href="" class="header__banner--text"><img src="images/svg/clock.svg" class="header__banner--icon"
+          alt="Clock Icon">11:00 am - 5:00 pm</a> <a href="" class="header__banner--text"><img
+          src="images/svg/place.svg" class="header__banner--icon" alt="Location Icon">3260 Spruce St.</a>
+    </div>
+  </header><!-- Item Overlays -->
+  <div class="popup">
+    <div class="popup-overlay"></div>
+    <div class="main-popup">
+      <div class="login">
+    <span class="close-btn">
+        <img src="images/svg/X.svg" alt="x" class="close-btn" /></span>
+      <div class=""><img class="detail__item--image" src="images/png/Mobile-PNG/thai%20basil%20overlay%20picture.png"
+          alt="thai%20basil%20overlay%20picture"></div>
+
+      <div class="card-outer">
+
+        <!-- <div class=""><img class="detail__item--image" src="images/png/Mobile-PNG/thai%20basil%20overlay%20picture.png" alt="thai%20basil%20overlay%20picture"></div> -->
+        <div class="card-inner">
+          <h2 class="detail__item--name">Thai Basil Chicken Taco</h2>
+          <h2 class="detail__item--price">$12.00</h2>
+          <p class="detail__item--description">Made with lightly charred, seasoned grilled chicken, crisp, thinly sliced
+            fresh vegetables and creamy peanut sauce.<br>
+            <br>
+          </p>
+          <h2 class="detail__item--name">Special Instructions:</h2>
+          <input id="rectangle" type="text">
+          <!--<h2>Special Instructions</h2>
+                    Taken from: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+                        Issue: Making all elements universally border boxes breaks this, which requires blocks.
+                        <label class="container"><h2>VEGETARIAN</h2><br>chickpea substitute
+                        <input type="checkbox">
+                        <span class="checkmark"></span> 
+                      </label>
+                      <label class="container"><h2>GLUTEN ALLERGY</h2><br>taco shell substitute
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container"><h2>DAIRY ALLERGY</h2><br>no cheese
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container"><h2>NUT ALLERGY</h2><br>no peanuts
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container"><h2>NO SPICE</h2><br>no hot sauce or spice
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>-->
+          <a href="cart.html"><button class="button__center">
+              <h2>Add to Cart</h2>
+            </button></a>
+        </div>
+      </div>
+      </div>
+  
+    </div>
+
+  </div>
+  <div class="main-menuitem">
+    <h1 class="menu text__title">Tacos</h1>
+    <div class="container">
+      <div class="card open-btn">
+        <div class="imgBx"><img src="images/png/Mobile-PNG/korean%20beef%20taco.png" alt="korean%20beef%20taco"></div>
+        <div class="details">
+          <div class="content">
+            <h2>Korean BBQ Beef Short Rib Taco<br>
+              <span>$12.99</span>
+            </h2><img class="menu__item--plus" src="images/svg/Plus%20Symbol.svg" alt="Plus%20Symbol">
+            <!-- <a href="#">Add to cart</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="card open-btn">
+        <div class="imgBx"><img src="images/png/Mobile-PNG/thai%20basil%20chicken%20taco.png"
+            alt="thai%20basil%20chicken%20taco"></div>
+        <div class="details">
+          <div class="content">
+            <h2>Thai Basil Chicken Taco<br>
+              <span>$12.99</span>
+            </h2><!-- <p class="menu__item==price">$12.00</p> -->
+            <img class="menu__item--plus" src="images/svg/Plus%20Symbol.svg" alt="Plus%20Symbol">
+            <!-- <a href="#">Add to cart</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="card open-btn">
+        <div class="imgBx"><img src="images/png/Mobile-PNG/edamame%20taco.png" alt="edamame%20taco"></div>
+        <div class="details">
+          <div class="content">
+            <h2>Edamame Taco<br>
+              <span>$12.99</span>
+            </h2><!-- <p class="menu__item==price">$12.00</p> -->
+            <img class="menu__item--plus" src="images/svg/Plus%20Symbol.svg" alt="Plus%20Symbol">
+            <!-- <a href="#">Add to cart</a>  -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><a href="menu.html"><button class="button__primary">
+      <h2>Back to menu</h2>
+    </button></a> <a href="cart.html"><img class="cart" src="images/svg/Cart%20Icon.svg" alt="Cart%20Icon"></a>
+    <mobile-footer__order></mobile-footer__order>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="script/main.js"></script>
+</body>
+
+</html>
