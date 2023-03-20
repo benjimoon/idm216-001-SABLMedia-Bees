@@ -7,9 +7,9 @@ function get_project_path()
 {
     global $APP_CONFIG;
     if ($APP_CONFIG['environment'] === 'development') {
-        return $_SERVER['DOCUMENT_ROOT'] . '/idm216/alpha';
+        return $_SERVER['DOCUMENT_ROOT'] . '/idm216/final';
     } else {
-        return $_SERVER['DOCUMENT_ROOT'] . '/alpha';
+        return $_SERVER['DOCUMENT_ROOT'] . '/final';
     }
 }
 

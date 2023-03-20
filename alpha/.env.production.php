@@ -5,7 +5,7 @@
 $APP_CONFIG = [
     'environment' => 'production',
     'site_name' => 'My Site',
-    'site_url' => 'https://benjaminmoon.com/idm216/alpha',
+    'site_url' => 'https://benjaminmoon.com/idm216/final',
     'database_host' => 'localhost',
     'database_user' => 'benjaoq3_idm216',
     'database_pass' => '0f$xKdJ=mg{v',
