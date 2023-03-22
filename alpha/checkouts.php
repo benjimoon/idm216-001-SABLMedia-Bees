@@ -1,11 +1,8 @@
-
 <?php
 include_once 'app.php';
 $site_url = site_url();
 include_once __DIR__ . '/_components/header.php';
 ?>
-
-
 <div class="main1">
     <h1 class="menu text__title">Checkout</h1>
 </div>

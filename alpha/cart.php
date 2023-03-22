@@ -13,7 +13,7 @@ $orderTotal = 0;
 // var_dump($currentUser);
 // die;
 
-var_dump($user);
+// var_dump($user);
 $order = get_order_by_user_id($user);
 
 if ($order->num_rows > 0) {
@@ -38,7 +38,7 @@ if ($order->num_rows > 0) {
         echo "{$site_url}/login.php";
     }
     else {
-        echo "{$site_url}/checkout.php";
+        echo "{$site_url}/checkouts.php";
     }
     echo "'><button class='button__primary--cart'>";
     echo "<h2>Checkout</h2>";

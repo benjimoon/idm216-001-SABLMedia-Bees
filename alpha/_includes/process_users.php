@@ -22,7 +22,7 @@ if ($newUser) {
     $result = mysqli_query($db_connection, $query);
     // delete_user_by_id($user['id']);
     // add_user_to_session($newUser);
-    redirect_to('/checkout.php'); 
+    redirect_to('/checkouts.php'); 
     // $query = "SELECT * FROM orders WHERE userID = {$newUser['id']} AND status = 'active' AND meal_ID != 'NULL'";
    
     // $result = mysqli_query($db_connection, $query);

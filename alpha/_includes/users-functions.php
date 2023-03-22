@@ -139,11 +139,13 @@ function create_guest_user(){
          
     }
 
-function add_user_to_session($user) {
-    $_SESSION['user'] = [
-        'id' => $user['id'],
-    ];
-}
+    function add_user_to_session($user) {
+        global $_SESSION; 
+        $_SESSION = [];
+        $_SESSION['user'] = [
+            'id' => $user['id'],
+        ];
+    }
 
 /**
  * Delete user by the user id

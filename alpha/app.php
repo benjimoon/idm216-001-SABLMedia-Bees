@@ -3,10 +3,13 @@
  * This file is used store all the business
  * logic for the application.
  */
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: ".gmdate("D, d M Y H:i:s",time()+(-1*60))." GMT");
  session_start();
- ini_set('display_errors', 1);
- ini_set('display_startup_errors', 1);
- error_reporting(E_ALL);
+//  ini_set('display_errors', 1);
+//  ini_set('display_startup_errors', 1);
+//  error_reporting(E_ALL);
 // An array of values that will determine if you're working locally or on a production server.
 // @link https://stackoverflow.com/questions/2053245/how-can-i-detect-if-the-user-is-on-localhost-in-php
 $whitelist_host = ['127.0.0.1', '::1'];
@@ -41,7 +44,7 @@ include_once __DIR__ . '/_includes/users.php';
 //ADDED FOR LOGIN
 $isLoginPage = strpos($_SERVER['REQUEST_URI'], '/auth/login') !== false;
 $sessionUserId = $_SESSION['user']['id'] ?? null;
-var_dump($sessionUserId, 'session');
+// var_dump($sessionUserId, 'session');
 $user = $sessionUserId ? get_user_by_id($sessionUserId) : create_guest_user();
 
 // var_dump($sessionUserId);

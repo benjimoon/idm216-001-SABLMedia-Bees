@@ -4,7 +4,6 @@
 include '_components/prices.php';
 $id = $row['catID'];
 $site_url = site_url();
-include_once __DIR__ . '/_components/header.php';
 
 ?>
 <div class="main1">

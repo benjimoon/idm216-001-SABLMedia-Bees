@@ -25,8 +25,8 @@ function get_order_by_user_id($user) {
     // . "ORDER BY id DESC LIMIT 1";
 
     $result = mysqli_query($db_connection, $query);
-    var_dump($query);
-    var_dump($result);
+    // var_dump($query);
+    // var_dump($result);
 
     return $result;
 
