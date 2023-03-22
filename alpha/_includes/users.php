@@ -29,15 +29,16 @@ function getOrderByUserId($userId){
     // var_dump($result);
     if($result->num_rows === 1){
     return $result;
-    } else{ 
-        createNewOrderByUserId($userId);
-        $recentId = $db_connection->insert_id;
-        $query= "SELECT * FROM orders WHERE id = {$recentId} AND status = 'active' LIMIT 1";
-        $result = mysqli_query($db_connection, $query);
-        return $result;
+    } 
+    // else{ 
+    //     createNewOrderByUserId($userId);
+    //     $recentId = $db_connection->insert_id;
+    //     $query= "SELECT * FROM orders WHERE id = {$recentId} AND status = 'active' LIMIT 1";
+    //     $result = mysqli_query($db_connection, $query);
+    //     return $result;
         
 
-    }
+    // }
 //first check if current user. has an order. if yes,then return that order. other
 //if not create a new order. pass in user id. return order
 }

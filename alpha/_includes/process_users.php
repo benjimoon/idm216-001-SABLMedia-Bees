@@ -20,20 +20,20 @@ if ($newUser) {
     // var_dump($userOrder);
     // die;
     $result = mysqli_query($db_connection, $query);
-    delete_user_by_id($user['id']);
-    add_user_to_session($newUser);
+    // delete_user_by_id($user['id']);
+    // add_user_to_session($newUser);
+    redirect_to('/checkout.php'); 
+    // $query = "SELECT * FROM orders WHERE userID = {$newUser['id']} AND status = 'active' AND meal_ID != 'NULL'";
    
-    $query = "SELECT * FROM orders WHERE userID = {$newUser['id']} AND status = 'active' AND meal_ID != 'NULL'";
-    $result = mysqli_query($db_connection, $query);
-    if (mysqli_num_rows($result) > 0) {
-        redirect_to('/checkout.php'); 
-    }
-    else {
-        // redirect_to('/profile.php');
-        $return_to = isset($_SESSION['return_to']) ? $_SESSION['return_to'] : '/';
-        header('Location: ' . $return_to);
-        exit;
-    }  
+    // $result = mysqli_query($db_connection, $query);
+    // var_dump($query);
+    // var_dump($user);
+    // var_dump($newUser);
+    // var_dump($userOrder);
+
+    // if (mysqli_num_rows($result) > 0) {
+    //     redirect_to('/checkout.php'); 
+    // }
 } else {
     echo "here";
     $error_message = 'User was not logged in: ' . mysqli_error($db_connection);

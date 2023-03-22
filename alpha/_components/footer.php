@@ -7,6 +7,7 @@
   </footer>
 
   <script src="<?php echo site_url(); ?>/dist/scripts/main.js"></script>
+  <img src="<?php echo site_url(); ?>/dist/images/svg/Background-desktop.svg" class="background--desktop">
 
   </body>
 

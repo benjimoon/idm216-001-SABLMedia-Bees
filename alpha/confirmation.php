@@ -1,8 +1,14 @@
 <?php
 include_once 'app.php';
 $site_url = site_url();
+include_once __DIR__ . '/_components/header.php';
 
-
+?>
+<div class="main1">
+    <h1 class="menu text__title">Order Confirmation</h1>
+    <p class="body-text">Thank you, your order will be done approximately 15 min after your order! You can track your order on the home screen.</p>
+</div>
+<?php
 // ($user['isGuest']==0) ? "success": redirect_to('/auth/login.php') ;
 
 $orderTotal = 0;
@@ -13,7 +19,7 @@ $order = get_order_by_user_id($user);
 if ($order->num_rows > 0) {
     echo '<ul class="cart-item-list">';
     while($row = $order->fetch_assoc()) {
-        include '_components/checkout-item.php';
+        include '_components/confirmation-item.php';
     } // End while loop
     echo '</ul>';
 } 

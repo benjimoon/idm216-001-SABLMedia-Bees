@@ -48,8 +48,6 @@ function get_user_by_id($id)
     } else {
         return false;
     }
-    var_dump($query);
-    die;
 }
 
 /**
@@ -115,7 +113,7 @@ function get_user_by_username($username, $password)
         if ($result2) {
             $recentId = $db_connection->insert_id;
             $newUser = get_user_by_id($recentId);
-            // add_user_to_session($newUser);
+            add_user_to_session($newUser);
             return $newUser;
         } 
         else {
