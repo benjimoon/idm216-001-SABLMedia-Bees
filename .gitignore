@@ -8,3 +8,5 @@
 a/videos/
 error_log
 pieces/config/db.php
+
+alpha/.env.production.php
