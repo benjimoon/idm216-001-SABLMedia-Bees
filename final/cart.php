@@ -1,8 +1,9 @@
 <?php
 include_once 'app.php';
-include_once __DIR__ . '/_components/header.php';
-$page_title = 'Cart';
 $site_url = site_url();
+$page_title = 'Cart';
+include_once __DIR__ . '/_components/header.php';
+
 ?>
 <div class="main">
     
